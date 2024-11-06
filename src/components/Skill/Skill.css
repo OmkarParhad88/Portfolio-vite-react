@@ -1,0 +1,78 @@
+.skill {
+  padding: 3rem 0rem 14rem 3rem;
+  display: flex;
+  height: 60vh;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.awesome {
+  /* width: 50%; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.awesome > :nth-child(1) {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.awesome > :nth-child(2) {
+  color: var(--skyblue);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(3) {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.s-button {
+  width: 8rem;
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+.cards {
+  position: relative;
+  left: 5rem;
+  width: 32rem;
+}
+
+.cards > * {
+  position: relative;
+}
+
+.s-blur2 {
+  left: 14rem;
+  top: 8rem;
+}
+
+.s-blur1 {
+  top: 13rem;
+  left: -18rem;
+}
+
+@media screen and (max-width: 500px) {
+ .skill {
+    flex-direction: column;
+    gap: 5rem;
+    height: 51rem;
+    padding: 0rem 0.3rem;
+    justify-content: flex-start;
+}
+
+  .cards {
+    position: relative;
+    left: 0vw;
+    top: 3rem;
+  }
+
+  /* .cards>*{
+    position: static;
+  } */
+}

@@ -1,0 +1,33 @@
+.project{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  padding-top: 2rem;
+}
+
+.project span:nth-child(1){
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.project .swiper{
+  overflow: visible !important;
+}
+
+.project-slider{
+  margin-top: 3rem;
+  width:100%;
+}
+
+.project-slider .swiper-slide{
+  width: 20rem;
+
+}
+.project img{
+  width: 28rem;
+  filter: drop-shadow(-12px 15px 13px rgba(0,0,0,25));
+  border-radius: 19px;
+}

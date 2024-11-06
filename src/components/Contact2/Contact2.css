@@ -1,0 +1,9 @@
+.icons{
+  /* transform: scale(0.04); */
+  height: 1rem ;
+  width: 1rem;
+}
+.iconsDirection{
+  display: flex;
+  flex-direction: row;
+}

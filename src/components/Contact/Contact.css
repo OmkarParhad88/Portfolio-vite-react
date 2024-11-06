@@ -1,0 +1,60 @@
+.contact-form{
+  padding-top: 5rem;
+  display: flex;
+  height: 25rem;
+  margin-top: 9rem;
+  margin-left: 12vw;
+}
+.c-right{
+  display: flex;
+  justify-content: center;
+  flex:1;
+}
+
+.c-right>form{
+  display: flex;
+  flex-direction:column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.c-right .user{
+  width:20rem;
+  height: 2rem;
+  padding:0.3rem;
+  outline: none;
+  border: 2px solid var(--skyblue);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea{
+  height: 4rem!important;
+}
+
+.c-blur1{
+  top: 1rem;
+  left: 8rem;
+}
+
+@media screen  and (max-width:500px) {
+  .contact-form{
+    height: 23rem;
+    /* width: 90vw; */
+    padding: 0;
+    margin: 3rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  /* .c-right{
+    width: 90vw
+  } */
+
+  .c-right .user {
+    width: 16rem;}
+
+  .blur{
+    display: none;
+  }
+}

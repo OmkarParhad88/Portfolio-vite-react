@@ -1,0 +1,97 @@
+.education {
+  margin: 0rem 5rem 0px 2rem;
+  height: 25rem;
+  padding-top: 3rem;
+}
+
+.education > :nth-child(1) {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.education > span > img {
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: 0.4rem;
+}
+
+.pos {
+  position: relative;
+}
+
+.edu1 {
+  top: 1rem;
+  left: 0rem;
+}
+.edu2 {
+  top: 3rem;
+  left: 41vw;
+}
+
+.pos > :nth-child(1) {
+  color: var(--skyblue);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pos > :nth-child(2) {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.pos > :nth-child(3) {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.pos {
+  display: flex;
+  flex-direction: column;
+  border-radius: 34px;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  background: linear-gradient(180deg, #ffffff 26.71%, #0bffff 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(40, 251, 230, 0.42);
+  max-width: 27rem;
+}
+
+.e-blur2 {
+  left: -6rem;
+  top: 90rem;
+}
+
+.e-blur1 {
+  top: 93rem;
+  left: 46rem;
+}
+
+@media screen and (max-width: 500px) {
+  .education {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem;
+    gap: 2rem;
+    margin: 2rem 0.2rem;
+    height: 40rem;
+  }
+
+  .pos {
+    position: static;
+    display: flex;
+  }
+
+  .academic {
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .blur {
+    display: none;
+  }
+}

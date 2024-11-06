@@ -1,0 +1,90 @@
+.projects {
+  margin-top: 11rem;
+  padding: 0 3rem 0 3rem;
+  height: 29rem;
+  width: inherit;
+  display: flex;
+}
+
+.project > :nth-child(2) {
+  font-size: 2rem;
+}
+
+.p-right {
+  position: relative;
+}
+
+.p-mainCircle {
+  left: 9rem;
+  position: relative;
+  top: 2rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+
+.p-mainCircle > * {
+  position: absolute;
+}
+
+.p-mainCircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+}
+.p-mainCircle > :nth-child(2) {
+  top: 14rem;
+  left: 6rem;
+}
+.p-mainCircle > :nth-child(3) {
+  top: 5.5rem;
+  left: 6rem;
+}
+/* .p-mainCircle>:nth-child(1){
+  top:15rem;
+  left:5rem ;
+} */
+
+.p-secCircle > span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.p-secCircle > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  /* transform: scale(0.6); */
+}
+.p-secCircle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  border: 5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+
+.p-backCircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  z-index: -16;
+}
+
+.blueCircle {
+  background-color: rgb(3, 3, 231);
+  left: 18rem;
+  top: 0;
+}
+
+.yellowCircle {
+  background-color: rgb(255, 220, 23);
+  left: 18rem;
+  top: 8rem;
+}
