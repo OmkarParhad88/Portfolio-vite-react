@@ -1,4 +1,3 @@
-import React from "react";
 import FloatingDiv from "../FloatinDiv/FloatingDiv";
 import "./Intro.css";
 import github from "../../img/github.png";
