@@ -1,0 +1,70 @@
+# docker-compose.yml
+version: "3.9"
+services:
+  # postgres:
+  #   image: 895828969139.dkr.ecr.ap-south-1.amazonaws.com/vikash_mishra/custom-postgres:latest
+  #   # image: 895828969139.dkr.ecr.ap-south-1.amazonaws.com/vikash_mishra/custom-postgres:${POSTGRES_VERSION:-latest}
+  #   build:
+  #     context: ./postgres
+  #     dockerfile: Dockerfile
+  #   container_name: postgres-container
+  #   restart: on-failure
+  #   ports:
+  #     - "5433:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - pipo-docker-network
+
+  # java-app:
+  #   image: 895828969139.dkr.ecr.ap-south-1.amazonaws.com/vikash_mishra/iflow-zip-creator:${BACKEND_VERSION:-latest}
+  #   container_name: java-app-container
+  #   build:
+  #     context: ./iflow-zip-creator
+  #     dockerfile: Dockerfile
+  #   restart: on-failure
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - pipo-docker-network
+
+  # nest-app:
+  #   image: 895828969139.dkr.ecr.ap-south-1.amazonaws.com/vikash_mishra/nest-app-image:${BACKEND_VERSION:-latest}
+  #   container_name: nest-app-container
+  #   build:
+  #     context: ./pipo_cust_migration
+  #     dockerfile: Dockerfile
+  #   restart: on-failure
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - pipo-docker-network
+
+  nginx-react:
+    image: nginx-react-vite:0.1
+    # image: 895828969139.dkr.ecr.ap-south-1.amazonaws.com/vikash_mishra/custom-nginx:${BACKEND_VERSION:-latest}
+    container_name: nginxreact-container
+    build:
+      context: ./reverse-proxy
+      dockerfile: Dockerfile
+    restart: on-failure
+    depends_on:
+      - nest-app
+      - java-app
+    ports:
+      - "80:80"
+    volumes:
+      - ./reverse-proxy/conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./reverse-proxy/conf/default.conf:/etc/nginx/conf.d/default.conf
+      - ./reverse-proxy/html:/usr/share/nginx/html
+    networks:
+      - pipo-docker-network
+
+networks:
+  pipo-docker-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
